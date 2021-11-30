@@ -132,7 +132,12 @@ function App() {
       {user.isSignedIn ? (
         <button onClick={handleSignOut}>Sign out</button>
       ) : (
-        <button onClick={handleSignIn}>Sign in</button>
+        <button
+          style={{ background: "#2da44e", color: "#ffffff" }}
+          onClick={handleSignIn}
+        >
+          Sign in with google
+        </button>
       )}
       {user.isSignedIn && (
         <div>
@@ -176,7 +181,11 @@ function App() {
           required
         />
         <br />
-        <input type="submit" value={newUser ? "Sign up" : "Sign in"} />
+        <input
+          style={{ background: "#2da44e", color: "#ffffff" }}
+          type="submit"
+          value={newUser ? "Sign up" : "Sign in"}
+        />
       </form>
       {user.success && (
         <p style={{ color: "green" }}>
